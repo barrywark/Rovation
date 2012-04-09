@@ -1,0 +1,7 @@
+To install just type :
+
+install.packages(pathToRovation.tar.gz,repos=NULL).
+
+Then load into R with :
+
+library(Rovation).
