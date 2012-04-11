@@ -4,4 +4,13 @@ install.packages(pathToRovation.tar.gz,repos=NULL).
 
 Then load into R with :
 
+<<<<<<< HEAD
 library(Rovation).
+=======
+library(Rovation)
+.
+
+You can create a connection to a database with the 'newDataContext' function :
+
+dataContext <- NewDataContext("my_database_connection","my_username")
+>>>>>>> a477e15... Using capitalized NewDataContext
