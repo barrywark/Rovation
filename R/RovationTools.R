@@ -1,4 +1,4 @@
-newDataContext <- function
+NewDataContext <- function
 ### Returns a DataContext object after prompting for password
   (connection,
    ### Connection to the database
