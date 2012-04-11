@@ -9,4 +9,4 @@ library(Rovation)
 
 You can create a connection to a database with the 'newDataContext' function :
 
-dataContext <- newDataContext("my_database_connection","my_username")
+dataContext <- NewDataContext("my_database_connection","my_username")
