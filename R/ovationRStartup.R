@@ -1,4 +1,7 @@
 .onLoad <- function(libname, pkgname) {
+  library('rJava')
+  .jinit()
+  
   if (Sys.info()["sysname"]=="Linux"){
     Sys.setenv(OBJY_ROOT="/usr/object/linux86_64")
     Sys.setenv(OVATION_ROOT="/usr/ovation")
