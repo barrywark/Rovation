@@ -29,6 +29,18 @@ NewDataContext <- function
   ### A reference to a DataContext object
 }
 
+editQuery <- function
+### Edit an Ovation query using the GUI query editor
+(expressionTree=.jnull(class="com/physion/ebuilder/expression/ExpressionTree"))
+{
+	ExpressionBuilder <- J("com/physion/ebuilder/ExpressionBuilder")
+	rv <- ExpressionBuilder$editExpression(expressionTree)
+	if(rv$status == ExpressionBuilder$RETURN_STATUS_OK)
+		return(rv$expressionTree)
+	else
+		return(expressionTree){
+}
+
 
 datetime <- function
 ### Construct an Ovation timestamp from date components.
@@ -43,7 +55,7 @@ datetime <- function
      ### A DateTime object
         }
 
-nextJavaIt <- function
+iteratorNext <- function
 ### Wrapper for applying the "next" method to an iterator, because "next" is a protected word in R
 (iterator){
     .jrcall(iterator,"next")

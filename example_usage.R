@@ -4,13 +4,12 @@
 library('Rovation')
 
 ## Open a DataContext
-ctx <- newDataContext('<connection file>, '<user name>')
+context <- newDataContext('<connection file>, '<user name>')
 
-## Get top-level objects from ctx.
+## Get top-level objects from context.
 # Note that rJava (the R-Java bridge) uses $ instead of . to represent method calls.
-# So ctx.getProjects() in Java becomes ctx$getProjects() in R.
-
-projs <- ctx$getProjects()
+# So context.getProjects() in Java becomes context$getProjects() in R.
+projs <- context$getProjects()
 projs[[1]]$getPurpose()
 
 ## Plot a response
@@ -26,7 +25,7 @@ plot(seq(1,length(rData)),rData)
 ## Run a query and iterate the result
 # Because next is an R keyword, use the nextJavaIt method in Rovation to get the next object
 # from an iterator
-itr <- ctx$query('Epoch', 'true')
+itr <- context$query(editQuery())
 while(itr$hasNext())
-	epoch <- nextJavaIt(itr)
+	epoch <- iteratorNext(itr)
 end
