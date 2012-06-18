@@ -7,6 +7,6 @@ Then load into R with :
 library(Rovation)
 .
 
-You can create a connection to a database with the 'newDataContext' function :
+You can create a connection to a database with the 'NewDataContext' function :
 
 dataContext <- NewDataContext("my_database_connection","my_username")
