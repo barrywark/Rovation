@@ -4,7 +4,9 @@
 library('Rovation')
 
 ## Open a DataContext
-context <- NewDataContext('<connection file>, '<user name>')
+# Replace <connection string> with the connection string for your Ovation database
+# Replace <user name> with your Ovation database user name
+context <- NewDataContext('<connection string>, '<user name>')
 
 ## Get top-level objects from context.
 # Note that rJava (the R-Java bridge) uses $ instead of . to represent method calls.
